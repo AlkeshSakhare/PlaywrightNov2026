@@ -30,6 +30,9 @@ public class Day18_JSAlertHandle {
         // clickOnJS();
         //   clickOnConfirm();
         clickOnPrompt();
+        page.close();
+        browser.close();
+        playwright.close();
     }
 
     private static void clickOnConfirm() {

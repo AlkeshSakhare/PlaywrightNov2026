@@ -18,8 +18,9 @@ public class Day17_AutomaticLogin {
 
         // loginToApp();
         withoutCredentials();
-//        browser.close();
-//        playwright.close();
+        page.close();
+        browser.close();
+        playwright.close();
 
     }
 
