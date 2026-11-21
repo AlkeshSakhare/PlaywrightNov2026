@@ -1,16 +1,24 @@
 package tests;
 
-import constants.AppConstant;
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import pages.HomePage;
 
 public class HomePageTest extends BaseTest {
+    public static final String HOME_PAGE_TITLE = "Your Store";
+    HomePage homePage;
+
+    @BeforeMethod
+    void initHomePageTest() {
+        homePage = new HomePage(page);
+    }
 
     @Test(priority = 1)
     void verifyTitle() {
         String actualTitle = homePage.getPageTitle();
-        Assert.assertEquals(actualTitle, AppConstant.HOME_PAGE_TITLE);
+        Assert.assertEquals(actualTitle, HOME_PAGE_TITLE);
     }
 
     @Test(priority = 2)

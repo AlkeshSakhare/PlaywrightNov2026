@@ -38,3 +38,7 @@ build/
 trace.zip
 recording/
 test-output/
+build/
+logs/
+screenshots/
+target/

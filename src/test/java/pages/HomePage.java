@@ -2,8 +2,7 @@ package pages;
 
 import com.microsoft.playwright.Page;
 
-public class HomePage {
-    private Page page;
+public class HomePage extends BasePage {
     private String myAccountBtn = "span:has-text('My Account')";
     private String loginBtn = "a:text('Login')";
     private String registerBtn = "a:text('Register')";
@@ -12,7 +11,7 @@ public class HomePage {
     private String searchResultHeader = "#content h1";
 
     public HomePage(Page page) {
-        this.page = page;
+        super(page);
     }
 
     public String getSearchResultHeader() {

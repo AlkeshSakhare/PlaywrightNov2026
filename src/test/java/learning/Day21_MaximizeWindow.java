@@ -9,7 +9,7 @@ public class Day21_MaximizeWindow {
         Dimension dimension = Toolkit.getDefaultToolkit().getScreenSize();
         int width = (int) dimension.getWidth();
         int height = (int) dimension.getHeight();
-
+        System.out.println("width : " + width + "\t height : " + height);
         Playwright playwright = Playwright.create();
         Browser browser = playwright.webkit().launch(new BrowserType.LaunchOptions().setHeadless(false));
         BrowserContext context = browser.newContext(new Browser.NewContextOptions().setViewportSize(width, height));
